@@ -18,7 +18,10 @@
     <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top py-3">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">DelAI <span class="text-primary">Studio</span></a>
-            <div class="collapse navbar-collapse">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
                     <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
@@ -54,10 +57,10 @@
                     
                     <div class="alert alert-info d-flex align-items-center my-4" role="alert">
                         <i class="bi bi-info-circle-fill fs-4 me-3"></i>
-                        <div><strong>Fakta AI:</strong> Model CNN modern yang digunakan dalam image classification dapat mengenali ribuan kategori objek secara *real-time* di perangkat mobile berkat TensorFlow Lite.</div>
+                        <div><strong>Fakta AI:</strong> Model CNN modern yang digunakan dalam image classification dapat mengenali ribuan kategori objek secara *real-time* di perangkat mobile.</div>
                     </div>
 
-                    <h4 class="fw-bold mt-4">Tahapan Utama dalam CNN:</h4>
+                    <h2 class="h4 fw-bold mt-4">Tahapan Utama dalam CNN:</h2>
                     <ul class="list-group list-group-flush mb-4">
                         <li class="list-group-item"><i class="bi bi-check2-circle text-primary me-2"></i><strong>Convolutional Layer:</strong> Mengekstraksi fitur visual dari gambar input.</li>
                         <li class="list-group-item"><i class="bi bi-check2-circle text-primary me-2"></i><strong>Pooling Layer:</strong> Mengurangi dimensi data spasial untuk efisiensi komputasi.</li>
@@ -75,13 +78,13 @@
 
                 <!-- Comments Section -->
                 <section>
-                    <h4 class="fw-bold mb-4">Tinggalkan Komentar</h4>
+                    <h2 class="h4 fw-bold mb-4">Tinggalkan Komentar</h2>
                     <div class="card border-0 bg-white shadow-sm p-4 rounded-4">
                         <form>
                             <div class="d-flex gap-3 mb-3">
                                 <i class="bi bi-person-circle fs-1 text-secondary"></i>
                                 <div class="w-100">
-                                    <textarea class="form-control mb-3" rows="3" placeholder="Bagikan tanggapan Anda..."></textarea>
+                                    <textarea class="form-control mb-3" aria-label="Tinggalkan Komentar" rows="3" placeholder="Bagikan tanggapan Anda..."></textarea>
                                     <button type="submit" class="btn btn-primary px-4 rounded-pill">Kirim Komentar</button>
                                 </div>
                             </div>
@@ -100,5 +103,7 @@
         </div>
     </footer>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
