@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - DelAI Studio</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body { background-color: #f8fafc; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; transition: all 0.3s ease; }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">DelAI <span class="text-primary">Studio</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv.html">CV Profil</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container py-5">
+        <div class="text-center mb-5">
+            <h1 class="fw-bold">Jurnal Keahlian AI</h1>
+            <p class="text-muted">Insight, tutorial, dan perkembangan terbaru di dunia Artificial Intelligence.</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Blog Item 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=500&q=80" class="card-img-top" alt="AI Model">
+                    <div class="card-body">
+                        <span class="badge bg-primary mb-2"><i class="bi bi-cpu"></i> Machine Learning</span>
+                        <h5 class="card-title fw-bold"><a href="blog-detail.html" class="text-dark text-decoration-none">Memahami Convolutional Neural Networks (CNN)</a></h5>
+                        <p class="card-text text-muted">Panduan dasar bagaimana CNN bekerja dalam memproses analisis citra dan computer vision.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 text-muted small pb-3">
+                        <i class="bi bi-person me-1"></i> Admin | <i class="bi bi-calendar me-1"></i> 17 Sep 2026
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Item 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&q=80" class="card-img-top" alt="Generative AI">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2"><i class="bi bi-chat-square-text"></i> Generative AI</span>
+                        <h5 class="card-title fw-bold"><a href="blog-detail.html" class="text-dark text-decoration-none">Seni Prompt Engineering untuk LLM</a></h5>
+                        <p class="card-text text-muted">Teknik terbaik menyusun prompt agar mendapatkan output AI yang akurat dan relevan.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 text-muted small pb-3">
+                        <i class="bi bi-person me-1"></i> Tim AI | <i class="bi bi-calendar me-1"></i> 10 Sep 2026
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Item 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=500&q=80" class="card-img-top" alt="Cloud API">
+                    <div class="card-body">
+                        <span class="badge bg-info text-dark mb-2"><i class="bi bi-cloud-arrow-up"></i> MLOps</span>
+                        <h5 class="card-title fw-bold"><a href="blog-detail.html" class="text-dark text-decoration-none">Integrasi Model AI dengan Spring Boot</a></h5>
+                        <p class="card-text text-muted">Membangun backend service yang tangguh untuk menyajikan model machine learning di production.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 text-muted small pb-3">
+                        <i class="bi bi-person me-1"></i> Admin | <i class="bi bi-calendar me-1"></i> 05 Sep 2026
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Item 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=500&q=80" class="card-img-top" alt="Etika AI">
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark mb-2"><i class="bi bi-shield-check"></i> Etika AI</span>
+                        <h5 class="card-title fw-bold"><a href="blog-detail.html" class="text-dark text-decoration-none">Bias Data dalam Algoritma Prediktif</a></h5>
+                        <p class="card-text text-muted">Mengapa data yang baik adalah kunci, dan bagaimana menghindari bias kognitif mesin.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 text-muted small pb-3">
+                        <i class="bi bi-person me-1"></i> Data Team | <i class="bi bi-calendar me-1"></i> 01 Sep 2026
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0 text-muted">&copy; 2026 DelAI Studio. Built with Bootstrap 5.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
