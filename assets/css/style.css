@@ -1,8 +1,7 @@
 /* =========================================
-   CSS Variables & Reset (Optimized for Lighthouse)
+   CSS Variables & Reset
    ========================================= */
 :root {
-    /* Warna digelapkan agar lolos uji kontras Axe Core Accessibility */
     --primary-color: #0369a1; 
     --secondary-color: #075985;
     --dark-bg: #0f172a;
@@ -17,7 +16,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Menggunakan System Font agar Performance 100 (Tidak ada render-blocking) */
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -72,7 +70,7 @@ a {
 }
 
 /* =========================================
-   Header & Navbar (Flexbox)
+   Header & Navbar
    ========================================= */
 header {
     background-color: var(--white);
@@ -93,7 +91,7 @@ nav {
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--primary-color);
-    padding: 0.5rem; /* Tap target SEO/Mobile */
+    padding: 0.5rem;
 }
 
 .nav-links {
@@ -105,7 +103,7 @@ nav {
 .nav-links a {
     font-weight: 500;
     transition: var(--transition);
-    padding: 0.5rem; /* Tap target SEO/Mobile */
+    padding: 0.5rem;
     display: block;
 }
 
@@ -114,7 +112,7 @@ nav {
 }
 
 /* =========================================
-   Hero Section (Flexbox)
+   Hero Section
    ========================================= */
 #hero {
     background: linear-gradient(135deg, var(--dark-bg), #1e293b);
@@ -136,7 +134,7 @@ nav {
 }
 
 /* =========================================
-   Layanan Section (CSS Grid)
+   Layanan Section
    ========================================= */
 #layanan {
     padding: 5rem 0;
@@ -216,7 +214,6 @@ nav {
     gap: 1.2rem;
 }
 
-/* Penambahan Label styling untuk Axe Core */
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
@@ -248,13 +245,20 @@ footer .footer-links {
 
 footer .footer-links a {
     margin: 0 10px;
-    color: var(--primary-color);
+    color: #bae6fd; /* Lolos Kontras Axe Core */
     padding: 0.5rem;
     display: inline-block;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+footer .footer-links a:hover {
+    color: var(--white);
+    text-decoration: underline;
 }
 
 /* =========================================
-   Media Query (Responsive Design)
+   Media Query (Responsive)
    ========================================= */
 @media (max-width: 768px) {
     nav {
