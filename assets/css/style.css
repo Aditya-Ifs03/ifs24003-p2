@@ -1,299 +1,72 @@
-/* =========================================
-   CSS Variables & Reset
-   ========================================= */
 :root {
-    --primary-color: #0369a1; 
-    --secondary-color: #075985;
-    --dark-bg: #0f172a;
-    --light-bg: #f8fafc;
-    --text-main: #334155;
-    --text-light: #94a3b8;
+    --primary: #0369a1; 
+    --secondary: #075985;
+    --dark: #0f172a;
+    --light: #f8fafc;
+    --text: #334155;
     --white: #ffffff;
-    /* Transisi dioptimalkan untuk Performance (menghindari "all") */
-    --transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: system-ui, -apple-system, sans-serif;
 }
 
 body {
-    background-color: var(--light-bg);
-    color: var(--text-main);
+    background-color: var(--light);
+    color: var(--text);
     line-height: 1.6;
 }
 
-/* =========================================
-   Typography & Utilities
-   ========================================= */
-h1, h2, h3 {
-    color: var(--dark-bg);
-    margin-bottom: 1rem;
-    line-height: 1.2;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+h1, h2, h3 { color: var(--dark); margin-bottom: 1rem; line-height: 1.2; }
+a { text-decoration: none; color: inherit; }
+.container { width: 90%; max-width: 1200px; margin: 0 auto; }
 
 .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 48px;
-    padding: 0.8rem 1.5rem;
-    background-color: var(--primary-color);
-    color: var(--white);
-    border: none;
-    border-radius: 5px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: var(--transition);
-    text-align: center;
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 48px; padding: 0.8rem 1.5rem;
+    background-color: var(--primary); color: var(--white);
+    border-radius: 5px; font-weight: 600; cursor: pointer;
 }
+.btn:hover { background-color: var(--secondary); }
 
-.btn:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-2px);
-}
+.section-title { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; }
 
-.section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: var(--dark-bg);
-}
+header { background-color: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+nav { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0; }
+.brand-logo { font-size: 1.8rem; font-weight: 700; color: var(--primary); padding: 12px; }
+.nav-links { display: flex; gap: 0.5rem; list-style: none; flex-wrap: wrap; }
+.nav-links a { font-weight: 500; padding: 12px 16px; min-height: 48px; display: flex; align-items: center; }
+.nav-links a:hover { color: var(--primary); }
 
-/* Trik Performance Maksimal (Skip rendering konten yang tidak terlihat) */
-#layanan, #tentang, #kontak, footer {
-    content-visibility: auto;
-    contain-intrinsic-size: 500px;
-}
+#hero { background-color: var(--dark); color: var(--white); padding: 6rem 0; text-align: center; }
+#hero h1 { color: var(--white); font-size: 3.5rem; }
+#hero p { font-size: 1.2rem; color: #cbd5e1; max-width: 600px; margin: 0 auto 2rem auto; }
 
-/* =========================================
-   Header & Navbar
-   ========================================= */
-header {
-    background-color: var(--white);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+#layanan { padding: 5rem 0; }
+.grid-layanan { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.card { background-color: var(--white); padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; }
+.card-icon { font-size: 3rem; margin-bottom: 1rem; }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 0;
-}
+#tentang, #kontak { padding: 5rem 0; background-color: var(--white); }
+#tentang p { max-width: 800px; margin: 0 auto; text-align: center; }
 
-.brand-logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    padding: 12px;
-    display: inline-block;
-    min-height: 48px;
-}
+.kontak-wrapper { display: flex; flex-wrap: wrap; gap: 3rem; background-color: var(--light); padding: 3rem; border-radius: 8px; }
+.kontak-info, .kontak-form { flex: 1; min-width: 300px; }
+.form-group { margin-bottom: 1rem; }
+.form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--dark); }
+.form-group input, .form-group textarea { width: 100%; padding: 0.8rem; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 1rem; }
 
-.nav-links {
-    display: flex;
-    gap: 0.5rem;
-    list-style: none;
-    flex-wrap: wrap;
-}
+footer { background-color: var(--dark); color: #cbd5e1; text-align: center; padding: 2rem 0; }
+.footer-links { margin-top: 1rem; display: flex; justify-content: center; gap: 1.5rem; }
+.footer-links a { color: #bae6fd; padding: 12px; min-height: 48px; font-weight: 500; }
+.footer-links a:hover { color: var(--white); text-decoration: underline; }
 
-.nav-links a {
-    font-weight: 500;
-    transition: var(--transition);
-    padding: 12px 16px;
-    min-height: 48px;
-    display: flex;
-    align-items: center;
-}
-
-.nav-links a:hover {
-    color: var(--primary-color);
-}
-
-/* =========================================
-   Hero Section
-   ========================================= */
-#hero {
-    background-color: var(--dark-bg); /* Fallback background cepat */
-    background-image: linear-gradient(135deg, var(--dark-bg), #1e293b);
-    color: var(--white);
-    padding: 6rem 0;
-    text-align: center;
-}
-
-#hero h1 {
-    color: var(--white);
-    font-size: 3.5rem;
-}
-
-#hero p {
-    font-size: 1.2rem;
-    color: var(--text-light);
-    max-width: 600px;
-    margin: 0 auto 2rem auto;
-}
-
-/* =========================================
-   Layanan Section
-   ========================================= */
-#layanan {
-    padding: 5rem 0;
-    background-color: var(--light-bg);
-}
-
-.grid-layanan {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.card {
-    background-color: var(--white);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: var(--transition);
-    text-align: center;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.card-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    font-style: normal;
-}
-
-/* =========================================
-   Tentang Section
-   ========================================= */
-#tentang {
-    padding: 5rem 0;
-    background-color: var(--white);
-    text-align: center;
-}
-
-#tentang p {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-}
-
-/* =========================================
-   Kontak Section & Form
-   ========================================= */
-#kontak {
-    padding: 5rem 0;
-    background-color: var(--light-bg);
-}
-
-.kontak-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3rem;
-    background-color: var(--white);
-    padding: 3rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-}
-
-.kontak-info, .kontak-form {
-    flex: 1;
-    min-width: 300px;
-}
-
-.kontak-info h3 {
-    margin-bottom: 1rem;
-}
-
-.kontak-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: var(--dark-bg);
-}
-
-.form-group input, .form-group textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #cbd5e1;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-/* =========================================
-   Footer
-   ========================================= */
-footer {
-    background-color: var(--dark-bg);
-    color: var(--text-light);
-    text-align: center;
-    padding: 2rem 0;
-}
-
-footer .footer-links {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.5rem; /* Jarak aman antar klik (Tap Target SEO) */
-}
-
-footer .footer-links a {
-    color: #bae6fd;
-    padding: 12px 16px;
-    min-height: 48px;
-    display: inline-flex;
-    align-items: center;
-    font-weight: 500;
-    transition: var(--transition);
-}
-
-footer .footer-links a:hover {
-    color: var(--white);
-    text-decoration: underline;
-}
-
-/* =========================================
-   Media Query
-   ========================================= */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
-    .nav-links {
-        justify-content: center;
-    }
-    #hero h1 {
-        font-size: 2.5rem;
-    }
-    .kontak-wrapper {
-        flex-direction: column;
-    }
+    nav { flex-direction: column; }
+    .nav-links { justify-content: center; }
+    #hero h1 { font-size: 2.5rem; }
+    .kontak-wrapper { flex-direction: column; }
 }
