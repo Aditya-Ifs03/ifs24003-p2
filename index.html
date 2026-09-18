@@ -3,118 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DelAI Studio - Solusi AI Terbaik</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
-    <!-- External CSS -->
+    <!-- Meta tag wajib untuk SEO & Best Practices -->
+    <meta name="description" content="Landing Page note - Layanan Kecerdasan Buatan">
+    <meta name="theme-color" content="#0369a1">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+    
+    <title>note - Solusi Kecerdasan Buatan</title>
+    <!-- CSS Eksternal -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <!-- Navbar -->
-    <header class="site-header">
-        <div class="container navbar">
-            <a href="index.html" class="logo">DelAI <span>Studio</span></a>
-            <nav class="nav-menu">
-                <a href="#layanan">Layanan</a>
-                <a href="#tentang">Tentang</a>
-                <a href="blog.html">Blog</a>
-                <a href="cv.html">CV Profil</a>
-                <a href="#kontak" class="btn btn-primary">Konsultasi</a>
+    <!-- Header & Navigasi -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="brand-logo">note </a>
+                <ul class="nav-links">
+                    <li><a href="#hero">Beranda</a></li>
+                    <li><a href="#layanan">Layanan</a></li>
+                    <li><a href="#tentang">Tentang Kami</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                    <li><a href="blog.html">Blog AI</a></li>
+                    <li><a href="cv.html">Profil CEO</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Konten Utama -->
     <main>
-        <section class="hero">
-            <div class="container hero-content">
-                <div class="hero-text">
-                    <p class="eyebrow">Transformasi Digital Masa Depan</p>
-                    <h1>Solusi Cerdas dengan <span>Kekuatan AI</span></h1>
-                    <p class="hero-description">
-                        Tingkatkan efisiensi dan inovasi bisnis Anda melalui layanan Machine Learning, Computer Vision, dan Automasi cerdas bersama DelAI Studio.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#layanan" class="btn btn-primary">Lihat Layanan</a>
-                        <a href="#kontak" class="btn btn-outline">Hubungi Kami</a>
+        <!-- Section Hero -->
+        <section id="hero">
+            <div class="container">
+                <h1>Era Baru Otomasi Bisnis</h1>
+                <p>note hadir untuk mentransformasi operasional bisnis Anda dengan solusi Kecerdasan Buatan (AI) yang presisi, efisien, dan inovatif.</p>
+                <a href="#layanan" class="btn">Lihat Layanan Kami</a>
+            </div>
+        </section>
+
+        <!-- Section Layanan -->
+        <section id="layanan">
+            <div class="container">
+                <h2 class="section-title">Layanan Inovatif Kami</h2>
+                <div class="grid-layanan">
+                    <article class="card">
+                        <div class="card-icon">🤖</div>
+                        <h3>Chatbot & Virtual Assistant</h3>
+                        <p>Tingkatkan pengalaman pelanggan dengan AI generatif yang mampu merespons pertanyaan secara cerdas 24/7 menggunakan arsitektur NLP terkini.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">👁️</div>
+                        <h3>Computer Vision</h3>
+                        <p>Otomatisasi pemantauan industri dan deteksi anomali produk secara real-time menggunakan model deep learning pengenalan gambar.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">📈</div>
+                        <h3>Analitik Prediktif</h3>
+                        <p>Manfaatkan data mentah perusahaan Anda untuk memprediksi tren masa depan, mengoptimalkan supply chain, dan meningkatkan penjualan.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Tentang Perusahaan -->
+        <section id="tentang">
+            <div class="container">
+                <h2 class="section-title">Mengapa Memilih note?</h2>
+                <p>Berawal dari semangat riset , <strong>note</strong> berkomitmen untuk menjembatani kesenjangan antara teknologi masa depan dan kebutuhan industri riil. Kami mengutamakan etika AI, keamanan data privasi, dan model algoritma yang disesuaikan khusus untuk karakteristik bisnis klien kami di Indonesia.</p>
+            </div>
+        </section>
+
+        <!-- Section Kontak -->
+        <section id="kontak">
+            <div class="container">
+                <h2 class="section-title">Mulai Transformasi Anda</h2>
+                <div class="kontak-wrapper">
+                    <div class="kontak-info">
+                        <h3>Hubungi Tim Pakar Kami</h3>
+                        <p>Apakah Anda siap mengintegrasikan AI ke dalam bisnis Anda? Jangan ragu untuk berkonsultasi bersama kami.</p>
+                        <br>
+                        <p><strong>Email:</strong> hello@note.com</p>
+                        <p><strong>Telepon:</strong> +62 812 3456 7890</p>
+                        <p><strong>Lokasi:</strong> Toba, Sumatera Utara</p>
+                    </div>
+                    <div class="kontak-form">
+                        <form action="#">
+                            <!-- Penambahan elemen LABEL sangat Wajib untuk lolos Axe Core -->
+                            <div class="form-group">
+                                <label for="namaLengkap">Nama Lengkap</label>
+                                <input type="text" id="namaLengkap" name="namaLengkap" placeholder="Masukkan nama Anda" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="emailPerusahaan">Email Perusahaan</label>
+                                <input type="email" id="emailPerusahaan" name="emailPerusahaan" placeholder="Masukkan email perusahaan" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pesan">Pesan & Kebutuhan</label>
+                                <textarea id="pesan" name="pesan" rows="4" placeholder="Ceritakan kebutuhan atau kendala bisnis Anda..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn">Kirim Pesan</button>
+                        </form>
                     </div>
                 </div>
-                <div class="hero-visual">
-                    <!-- Placeholder Ilustrasi -->
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=400&q=80" alt="AI Brain Concept" style="border-radius: 50%; width: 300px; height: 300px; object-fit: cover; position: relative; z-index: 2;">
-                </div>
-            </div>
-        </section>
-
-        <!-- Layanan Section -->
-        <section id="layanan" class="section section-alt">
-            <div class="container">
-                <div class="section-heading">
-                    <p class="eyebrow">Layanan Kami</p>
-                    <h2>Solusi AI Terintegrasi</h2>
-                    <p>Kami menyediakan berbagai layanan Artificial Intelligence yang disesuaikan dengan kebutuhan industri Anda.</p>
-                </div>
-                <div class="cards-grid">
-                    <article class="card">
-                        <h3>Computer Vision</h3>
-                        <p>Analisis gambar dan video secara real-time menggunakan arsitektur Convolutional Neural Networks (CNN).</p>
-                    </article>
-                    <article class="card">
-                        <h3>Analitik Prediktif</h3>
-                        <p>Ubah data mentah menjadi wawasan bisnis dengan pemodelan machine learning tingkat lanjut.</p>
-                    </article>
-                    <article class="card">
-                        <h3>Automasi Bisnis</h3>
-                        <p>Otomatisasi proses bisnis berulang menggunakan AI dan integrasi cloud untuk efisiensi maksimal.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Tentang Section -->
-        <section id="tentang" class="section">
-            <div class="container" style="display: flex; gap: 48px; flex-wrap: wrap; align-items: center;">
-                <div style="flex: 1; min-width: 300px;">
-                    <h2 style="font-size: 2.5rem; margin-bottom: 16px;">Mengapa DelAI Studio?</h2>
-                    <p style="color: var(--text-light); margin-bottom: 24px;">Berawal dari riset mendalam di bidang informatika, kami berkomitmen untuk menjembatani teknologi AI dengan kebutuhan dunia nyata. Tim kami ahli dalam arsitektur data dan pengembangan sistem komputasi terkini.</p>
-                    <a href="cv.html" class="btn btn-outline">Kenali Tim Kami</a>
-                </div>
-                <div style="flex: 1; min-width: 300px; background: var(--primary-soft); padding: 40px; border-radius: var(--radius-large);">
-                    <ul style="list-style: none; padding: 0; line-height: 2;">
-                        <li>✔️ Akurasi Model Tinggi</li>
-                        <li>✔️ Infrastruktur Cloud Scalable</li>
-                        <li>✔️ UI/UX Berpusat pada Pengguna</li>
-                        <li>✔️ Keamanan Data Terjamin</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Kontak Section -->
-        <section id="kontak" class="section section-alt">
-            <div class="container">
-                <div class="section-heading" style="text-align: center; margin-inline: auto;">
-                    <h2>Mulai Transformasi Anda</h2>
-                    <p>Diskusikan kebutuhan AI Anda dengan tim ahli kami.</p>
-                </div>
-                <form style="max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px;">
-                    <input type="text" placeholder="Nama Lengkap" aria-label="Nama Lengkap" style="padding: 12px; border-radius: var(--radius-small); border: 1px solid var(--border); width: 100%;" required>
-                    <input type="email" placeholder="Email Aktif" aria-label="Email Aktif" style="padding: 12px; border-radius: var(--radius-small); border: 1px solid var(--border); width: 100%;" required>
-                    <textarea placeholder="Pesan atau Kebutuhan AI Anda" aria-label="Pesan" rows="4" style="padding: 12px; border-radius: var(--radius-small); border: 1px solid var(--border); width: 100%;" required></textarea>
-                    <button type="submit" class="btn btn-primary" style="width: 100%; cursor: pointer;">Kirim Pesan</button>
-                </form>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer" style="padding-block: 40px; text-align: center; border-top: 1px solid var(--border);">
+    <footer>
         <div class="container">
-            <h3 style="margin-bottom: 12px;">DelAI <span>Studio</span></h3>
-            <p style="color: var(--text-light); font-size: 0.9rem;">© 2026 DelAI Studio. Dibuat untuk Studi Kasus Praktikum.</p>
+            <p>&copy; 2026 note - Hak Cipta Dilindungi.</p>
+            <div class="footer-links">
+                <a href="blog.html">Baca Blog Kami</a> | 
+                <a href="cv.html">Tentang Pendiri (CV)</a>
+            </div>
         </div>
     </footer>
 
