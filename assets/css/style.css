@@ -9,14 +9,14 @@
     --text-main: #334155;
     --text-light: #94a3b8;
     --white: #ffffff;
-    --transition: all 0.3s ease;
+    /* Transisi dioptimalkan untuk Performance (menghindari "all") */
+    --transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Font bawaan sistem (100% Performance, no render-blocking) */
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -50,7 +50,7 @@ a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 48px; /* SEO & Aksesibilitas: Minimal area klik 48px */
+    min-height: 48px;
     padding: 0.8rem 1.5rem;
     background-color: var(--primary-color);
     color: var(--white);
@@ -72,6 +72,12 @@ a {
     font-size: 2.5rem;
     margin-bottom: 3rem;
     color: var(--dark-bg);
+}
+
+/* Trik Performance Maksimal (Skip rendering konten yang tidak terlihat) */
+#layanan, #tentang, #kontak, footer {
+    content-visibility: auto;
+    contain-intrinsic-size: 500px;
 }
 
 /* =========================================
@@ -96,8 +102,9 @@ nav {
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--primary-color);
-    padding: 12px; /* Area klik yang lega untuk SEO Mobile */
+    padding: 12px;
     display: inline-block;
+    min-height: 48px;
 }
 
 .nav-links {
@@ -110,8 +117,8 @@ nav {
 .nav-links a {
     font-weight: 500;
     transition: var(--transition);
-    padding: 12px;
-    min-height: 48px; /* Mencegah penalti SEO "Tap targets are too small" */
+    padding: 12px 16px;
+    min-height: 48px;
     display: flex;
     align-items: center;
 }
@@ -124,7 +131,8 @@ nav {
    Hero Section
    ========================================= */
 #hero {
-    background: linear-gradient(135deg, var(--dark-bg), #1e293b);
+    background-color: var(--dark-bg); /* Fallback background cepat */
+    background-image: linear-gradient(135deg, var(--dark-bg), #1e293b);
     color: var(--white);
     padding: 6rem 0;
     text-align: center;
@@ -173,6 +181,7 @@ nav {
 .card-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
+    font-style: normal;
 }
 
 /* =========================================
@@ -253,12 +262,12 @@ footer .footer-links {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.5rem; /* Jarak aman antar klik (Tap Target SEO) */
 }
 
 footer .footer-links a {
-    color: #bae6fd; /* Rasio kontras tinggi, lolos Axe Core */
-    padding: 12px;
+    color: #bae6fd;
+    padding: 12px 16px;
     min-height: 48px;
     display: inline-flex;
     align-items: center;
