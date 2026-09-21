@@ -5,65 +5,87 @@
     --light: #f8fafc;
     --text: #334155;
     --white: #ffffff;
+    /* Variabel transition untuk menjawab feedback hover praktik CSS */
+    --transition-speed: 0.3s ease;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: system-ui, -apple-system, sans-serif;
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: system-ui, -apple-system, sans-serif; 
 }
 
-body {
-    background-color: var(--light);
-    color: var(--text);
-    line-height: 1.6;
+body { 
+    background-color: var(--light); 
+    color: var(--text); 
+    line-height: 1.6; 
 }
 
 h1, h2, h3 { color: var(--dark); margin-bottom: 1rem; line-height: 1.2; }
 a { text-decoration: none; color: inherit; }
 .container { width: 90%; max-width: 1200px; margin: 0 auto; }
 
+/* Tombol dengan transition hover */
 .btn {
     display: inline-flex; align-items: center; justify-content: center;
     min-height: 48px; padding: 0.8rem 1.5rem;
     background-color: var(--primary); color: var(--white);
     border-radius: 5px; font-weight: 600; cursor: pointer;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
 }
-.btn:hover { background-color: var(--secondary); }
+.btn:hover { 
+    background-color: var(--secondary); 
+    transform: translateY(-3px); 
+}
 
 .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; }
 
+/* Header & Navigasi */
 header { background-color: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
 nav { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0; }
 .brand-logo { font-size: 1.8rem; font-weight: 700; color: var(--primary); padding: 12px; }
 .nav-links { display: flex; gap: 0.5rem; list-style: none; flex-wrap: wrap; }
-.nav-links a { font-weight: 500; padding: 12px 16px; min-height: 48px; display: flex; align-items: center; }
+.nav-links a { font-weight: 500; padding: 12px 16px; min-height: 48px; display: flex; align-items: center; transition: color var(--transition-speed); }
 .nav-links a:hover { color: var(--primary); }
 
+/* Konten Utama */
 #hero { background-color: var(--dark); color: var(--white); padding: 6rem 0; text-align: center; }
 #hero h1 { color: var(--white); font-size: 3.5rem; }
 #hero p { font-size: 1.2rem; color: #cbd5e1; max-width: 600px; margin: 0 auto 2rem auto; }
 
 #layanan { padding: 5rem 0; }
 .grid-layanan { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-.card { background-color: var(--white); padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; }
+
+/* Kartu dengan transition hover */
+.card { 
+    background-color: var(--white); padding: 2rem; border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; 
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed); 
+}
+.card:hover { 
+    transform: translateY(-8px); 
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1); 
+}
 .card-icon { font-size: 3rem; margin-bottom: 1rem; }
 
 #tentang, #kontak { padding: 5rem 0; background-color: var(--white); }
 #tentang p { max-width: 800px; margin: 0 auto; text-align: center; }
 
+/* Kontak */
 .kontak-wrapper { display: flex; flex-wrap: wrap; gap: 3rem; background-color: var(--light); padding: 3rem; border-radius: 8px; }
 .kontak-info, .kontak-form { flex: 1; min-width: 300px; }
 .form-group { margin-bottom: 1rem; }
 .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--dark); }
 .form-group input, .form-group textarea { width: 100%; padding: 0.8rem; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 1rem; }
 
+/* Footer */
 footer { background-color: var(--dark); color: #cbd5e1; text-align: center; padding: 2rem 0; }
 .footer-links { margin-top: 1rem; display: flex; justify-content: center; gap: 1.5rem; }
-.footer-links a { color: #bae6fd; padding: 12px; min-height: 48px; font-weight: 500; }
+.footer-links a { color: #bae6fd; padding: 12px; min-height: 48px; font-weight: 500; transition: color var(--transition-speed); }
 .footer-links a:hover { color: var(--white); text-decoration: underline; }
 
+/* Responsive */
 @media (max-width: 768px) {
     nav { flex-direction: column; }
     .nav-links { justify-content: center; }
