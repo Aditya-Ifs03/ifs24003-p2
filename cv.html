@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil CEO - Call Of AI</title>
-    <!-- Tailwind CSS v4 CDN -->
+    
+    <!-- Menggunakan Tailwind CSS v4 CDN -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
         @theme {
@@ -15,39 +16,64 @@
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand selection:text-white">
 
+    <!-- Navigasi Responsif (Desktop & Mobile Hamburger) -->
     <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <a href="index.html" class="text-xl font-bold text-brand tracking-tight">Call Of AI</a>
-            <div class="hidden sm:flex space-x-8">
-                <a href="index.html" class="text-sm font-semibold text-slate-600 hover:text-brand transition">Beranda</a>
-                <a href="blog.html" class="text-sm font-semibold text-slate-600 hover:text-brand transition">Blog</a>
-                <a href="cv.html" class="text-sm font-semibold text-brand transition">Profil CEO</a>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="index.html" class="text-xl font-bold text-brand tracking-tight">Call Of AI</a>
+                
+                <!-- Menu Desktop -->
+                <div class="hidden sm:flex space-x-8">
+                    <a href="index.html" class="text-sm font-semibold text-slate-600 hover:text-brand transition">Beranda</a>
+                    <a href="blog.html" class="text-sm font-semibold text-slate-600 hover:text-brand transition">Blog</a>
+                    <a href="cv.html" class="text-sm font-semibold text-brand transition">Profil CEO</a>
+                </div>
+
+                <!-- Hamburger Button (Mobile) menggunakan Checkbox Hack -->
+                <div class="sm:hidden flex items-center">
+                    <label for="mobile-menu-toggle" class="cursor-pointer text-slate-600 hover:text-brand">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Dropdown Mobile (Tersembunyi secara default) -->
+        <input type="checkbox" id="mobile-menu-toggle" class="hidden peer">
+        <div class="sm:hidden hidden peer-checked:block bg-white border-t border-slate-100">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand hover:bg-slate-50">Beranda</a>
+                <a href="blog.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand hover:bg-slate-50">Blog</a>
+                <a href="cv.html" class="block px-3 py-2 rounded-md text-base font-medium text-brand bg-slate-50">Profil CEO</a>
             </div>
         </div>
     </nav>
 
+    <!-- Konten Utama CV -->
     <main class="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:py-16">
         <div class="bg-white rounded-2xl shadow-md overflow-hidden">
             
+            <!-- Area Profil Header -->
             <header class="bg-brand-light p-8 sm:p-12 flex flex-col md:flex-row items-center gap-8">
-                <!-- Placeholder API yang valid untuk mencegah error path image -->
+                <!-- Foto Profil (Placeholder) -->
                 <img src="https://ui-avatars.com/api/?name=Aditya+Putera&size=200&background=0284c7&color=fff" alt="Foto Profil" class="w-32 h-32 rounded-full shadow-lg border-4 border-white object-cover">
                 <div class="text-center md:text-left">
                     <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-2">Aditya Putera Keliat</h1>
                     <p class="text-lg text-brand font-medium mb-4">Aspiring AI & Web Developer | CEO Call Of AI</p>
                     
                     <div class="flex flex-wrap justify-center md:justify-start gap-3 sm:gap-6 text-sm text-slate-600">
+                        <!-- Kontak Email -->
                         <span class="flex items-center gap-1">
-                            <!-- Ikon Email -->
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                             aditya.keliat@callofai.com
                         </span>
-                        <!-- Menambahkan Telepon/WA yang diminta feedback -->
+                        <!-- Kontak WA -->
                         <span class="flex items-center gap-1">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                            +62 812-3456-7890 (WA)
+                            +62 812-3456-7890
                         </span>
-                        <!-- Menambahkan LinkedIn yang diminta feedback -->
+                        <!-- Tautan LinkedIn -->
                         <span class="flex items-center gap-1">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6M10 9l5 5 5-5M15 14V3"></path></svg>
                             linkedin.com/in/adityakeliat
@@ -58,6 +84,7 @@
 
             <div class="p-8 sm:p-12 space-y-10">
                 
+                <!-- Ringkasan Profil -->
                 <section>
                     <h2 class="text-2xl font-bold text-slate-800 border-b-2 border-brand-light pb-2 mb-4">Tentang Saya</h2>
                     <p class="text-slate-600 leading-relaxed text-justify">
@@ -67,6 +94,7 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                     
+                    <!-- Kolom Kiri -->
                     <div class="space-y-10">
                         <section>
                             <h2 class="text-2xl font-bold text-slate-800 border-b-2 border-brand-light pb-2 mb-4">Pendidikan</h2>
@@ -77,24 +105,19 @@
                             </div>
                         </section>
 
-                        <!-- Memisahkan section Pengalaman sesuai feedback -->
                         <section>
                             <h2 class="text-2xl font-bold text-slate-800 border-b-2 border-brand-light pb-2 mb-4">Pengalaman</h2>
                             <div class="space-y-6">
                                 <div>
-                                    <h3 class="font-bold text-slate-800">Founder & CEO</h3>
-                                    <p class="text-brand text-sm font-medium">Call Of AI (Okt 2026 - Sekarang)</p>
-                                    <p class="text-slate-600 text-sm mt-2">Memimpin pengembangan solusi AI berbasis Cloud dan Web untuk klien B2B.</p>
-                                </div>
-                                <div>
                                     <h3 class="font-bold text-slate-800">Google Student Ambassador</h3>
                                     <p class="text-brand text-sm font-medium">Kandidat Batch 2 (Agt 2026 - Sekarang)</p>
-                                    <p class="text-slate-600 text-sm mt-2">Mempromosikan dan mengedukasi ekosistem Google AI dan Cloud Platform.</p>
+                                    <p class="text-slate-600 text-sm mt-2">Mempromosikan dan mengedukasi ekosistem Google AI dan Cloud Platform di lingkungan kampus.</p>
                                 </div>
                             </div>
                         </section>
                     </div>
 
+                    <!-- Kolom Kanan -->
                     <div class="space-y-10">
                         <section>
                             <h2 class="text-2xl font-bold text-slate-800 border-b-2 border-brand-light pb-2 mb-4">Proyek & Portfolio</h2>
